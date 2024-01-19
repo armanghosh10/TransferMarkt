@@ -1,3 +1,11 @@
+import pandas as pd
+import numpy as np
+import requests
+import re
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+
+
 data = pd.read_excel('Final3.xlsx')
 data.columns
 
