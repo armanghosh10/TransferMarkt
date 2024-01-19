@@ -22,3 +22,9 @@ filtered_data["Club"] = label2
 filtered_data.drop("Leauge", axis=1, inplace=True)
 filtered_data["Leauge"] = label3
 filtered_data
+
+#Splitting the data into training and testing data
+y = filtered_data['MV']
+x = filtered_data.drop('MV', axis=1)
+x_train, x_test, y_train, y_test = train_test_split(
+x, y, test_size=0.33, random_state=4)
